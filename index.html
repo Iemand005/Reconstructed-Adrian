@@ -15,7 +15,6 @@
 }
 .face {
   position: absolute;
-  background-size:100% 100%;
   image-rendering: pixelated;
   background-color: blue;
 }
@@ -23,13 +22,13 @@
 .side {
   width: 140px;
   height: 80px;
-  background-size:100% 100%;
-  background: url(./cake_side.png);
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAIBAMAAAA7P9P/AAAAG1BMVEX//f6NQyTHYST26MunSyS7WB1/Oh399Njg07hlZYDcAAAAO0lEQVQI12MwZwCBYjhtXMBQzsBuzNAsUuxSLGLBkBLqqhSa4saQGKSk5KQqxpASqBSkFOrGkCYIAmkARJcLUDTrVAoAAAAASUVORK5CYII=');
   background-color: red;
+  background-size:100% 100%;
 }
 
-.top {background: url(./cake_top.png);width: 140px;height: 140px;transform: rotateX(90deg) translateZ(70px);}
-.bottom {background: url(./cake_bottom.png);width: 140px;height: 140px;transform: rotateX(-90deg) translateZ(10px);}
+.top {background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAFVBMVEX//f799Nj26MvTIS3oNTWwITLwc1q0V7ubAAAAWElEQVQI1yWNsQ2AMBAD7wmiNl9Q80wQhFgARB9mgP1nIApyYVnW6VhGYFwIgOxoOEIY6lesph0FmG2TQVJ6c22UzrsDzHZ5ATxw0ENjdAUTRtDV5b/H/ANp6wZw1HSbeAAAAABJRU5ErkJggg==');background-size:100% 100%;width: 140px;height: 140px;transform: rotateX(90deg) translateZ(70px);}
+.bottom {background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOAgMAAABiJsVCAAAADFBMVEV/Oh2NQyRrNCCnSyQVQXhRAAAASElEQVQI1w3HsQ2AIBRF0auBhBIKBnCTP8LDQFwDC/o/pAPJ6Q7xG1DHY/SrZV5cyE9hIU9ukpjpEJ1iVN9V8LnbRFnDiH3xA9voDVTuJx9NAAAAAElFTkSuQmCC');background-size:100% 100%;width: 140px;height: 140px;transform: rotateX(-90deg) translateZ(10px);}
 .right {transform: rotateY(90deg) translateZ(70px);}
 .left {transform: rotateY(-90deg) translateZ(70px);}
 .front {transform: rotateX(0deg) translateZ(70px);}
@@ -41,6 +40,9 @@
 }
   </style>
   </script>
+  <script src="./confetti.js"></script>
+<script>confetti.start()</script>
+<script>setTimeout(function(){confetti.stop();},3000)</script>
   <div class="container">
     <div class="cube">
       <div class="face front side"></div>

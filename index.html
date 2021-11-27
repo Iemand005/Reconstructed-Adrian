@@ -1,2 +1,74 @@
-<html><head><title>top secret</title></head><body>*** can't see what's here yet.                                     oh and ***'re ****</body>
+<!DOCTYPE html>
+<html>
+    <head></head> <!-- heyyyyyyyyyyy :3 -->
+    <body onload="play()">
+        <style>
+            :root {
+                --potat: 12px;
+            }
+            .test {
+                opacity: 50%;
+                background-color: blue;
+                top: 50px;
+                left: 50px;
+                position: absolute;
+                width: var(--potat);
+                height: var(--potat);
+                background-image: url(./cake_bottom.png);
+                background-size:100% 100%;
+                image-rendering: pixelated;
+            }
+            .another {
+                background-color: red;
+            }
+            .country {
+                background-color: green;
+            }
+            .tomorrow {
+                background-color: yellow;
+            }
+            .BEST {
+                background-color: purple;
+            }
+            cheese {
+                position: relative;
+                transform-style: preserve-3d;
+                transform: translateZ(-100px);
+            }
+        </style>
+        <script>
+            function play() {
+                var size = "100px"
+                var deep = "10cm"
+                var halfkebab = "50px"
+
+                thing = document.getElementsByClassName("test")[0]
+                allso = document.getElementById("another")
+                china = document.getElementById("heyo")
+                above = document.getElementById("below")
+                lasse = document.getElementById("dumb")
+                husky = document.getElementById("AMAZING")
+                document.documentElement.style.setProperty('--potat', size);
+                
+                window.addEventListener("mousemove", event => {
+                    
+                    pos = { x: (event.clientX - thing.offsetLeft - (thing.offsetWidth/2)), y: -(event.clientY - thing.offsetTop - (thing.offsetHeight/2))};
+                    thing.style.transform = `perspective(${deep}) rotateX(${pos.y}deg) rotateY(${pos.x}deg) translateZ(${halfkebab})`;
+                    allso.style.transform = `perspective(${deep}) rotateX(${pos.y}deg) rotateY(${pos.x+90}deg) translateZ(${halfkebab})`;
+                    china.style.transform = `perspective(${deep}) rotateX(${pos.y}deg) rotateY(${pos.x+180}deg) translateZ(${halfkebab})`;
+                    above.style.transform = `perspective(${deep}) rotateX(${pos.y}deg) rotateY(${pos.x-90}deg) translateZ(${halfkebab})`;
+                    lasse.style.transform = `perspective(${deep}) rotateX(${pos.y+90}deg) rotateZ(${-pos.x}deg) translateZ(${halfkebab})`;
+                    husky.style.transform = `perspective(${deep}) rotateX(${pos.y-90}deg) rotateZ(${pos.x}deg) translateZ(${halfkebab})`;
+                });
+            }
+        </script>                    <!--Husko is ***-->
+        <cheese>
+        <div class="test"></div>
+        <div id="another" class="another test"></div>
+        <div id="dumb" class="tomorrow test"></div>
+        <div id="heyo" class="country test"></div>
+        <div id="AMAZING" class="BEST test"></div>
+        <div id="below" class="BEST test"></div>
+        </cheese>
+    </body>
 </html>

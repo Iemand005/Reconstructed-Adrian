@@ -1,50 +1,39 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)https://****************************.***************.repl.co/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Birthday Counter</title>
   <style type="text/css">
         html, body {
             height: 100%;
             margin: 0;
-        }
-
-        .container {
-            min-height: 97%; 
+            background-color: #222;
         }
     </style>
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
-    .container {
+    container {
       display: flex;
       justify-content: center;
+      overflow: hidden;
     }
-
     p {
       font-size: 100px;
       font-family: "Roboto Condensed";
+      color: white;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <p id="demo">14d 10h 26m 52s </p>
-  </div>
+  <container>
+    <p id="demo">**********</p>
+  </container>
 <script>
 var countDownDate = new Date("Dec 23, 2021").getTime();
 var x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-  var days = Math.floor(distance / 86400000);
-  var hours = Math.floor((distance % 86400000) / 3600000);
-  var minutes = Math.floor((distance % 3600000) / 60000);
-  var seconds = Math.floor((distance % 60000) / 1000);
-
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  var now=new Date().getTime();distance=countDownDate-now;days=Math.floor(distance/86400000);hours=Math.floor((distance%86400000)/3600000);minutes=Math.floor((distance%3600000)/60000);seconds=Math.floor((distance%60000)/1000);
+  document.getElementById("demo").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s `;
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "HAPPY BIRTHDAY!!";
   }
 }, 1000);
 </script>
-
 </body></html>

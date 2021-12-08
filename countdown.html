@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://****************************.***************.repl.co/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            min-height: 97%; 
+        }
+    </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    p {
+      font-size: 100px;
+      font-family: "Roboto Condensed";
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p id="demo">14d 10h 26m 52s </p>
+  </div>
+<script>
+var countDownDate = new Date("Dec 23, 2021").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / 86400000);
+  var hours = Math.floor((distance % 86400000) / 3600000);
+  var minutes = Math.floor((distance % 3600000) / 60000);
+  var seconds = Math.floor((distance % 60000) / 1000);
+
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body></html>

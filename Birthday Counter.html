@@ -27,11 +27,18 @@
       border-bottom: 13px solid white;
       color: white;
     }
+
+    #x {
+      background-color: rgba(0,0,0,0);
+      font-family: "Roboto Condensed";
+      color: white;
+    }
   </style>
 </head>
-<body>
+<body style="background: white;">
+  <button id="x" ;="" onclick="thingy()" style="color: rgb(34, 34, 34); background: white;">x</button>
   <container>
-    <p id="demo">14d 10h 6m 51s </p>
+    <p id="demo" style="color: rgb(34, 34, 34); border-top: 13px solid rgb(34, 34, 34); border-bottom: 13px solid rgb(34, 34, 34);">14d 8h 56m 40s </p>
   </container>
 <script>
 var countDownDate = new Date("Dec 23, 2021").getTime();
@@ -43,5 +50,26 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "HAPPY BIRTHDAY!!";
   }
 }, 1000);
+
+var isClicked = false;
+function thingy() {
+  isClicked = !isClicked;
+  var x = document.body;
+  var y = document.getElementById("x");
+  var z = document.getElementById("demo");
+  if (isClicked) {
+    x.style.background = "white";
+    y.style.color = "#222";
+    z.style.color = "#222";
+    z.style.borderTop = "13px solid #222";
+    z.style.borderBottom = "13px solid #222";
+  } else {
+    x.style.background = "#222";
+    y.style.background = "white";
+    z.style.color = "white";
+    z.style.borderTop = "13px solid white";
+    z.style.borderBottom = "13px solid white";
+  }
+}
 </script>
 </body></html>

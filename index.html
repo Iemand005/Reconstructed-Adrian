@@ -24,13 +24,11 @@ There's a ***tie reading this.                                              Hint
     .face {
       position: absolute;
       image-rendering: pixelated;/*                     I didn't mean to ***** ***                        I'm *****
-:3  */background-color: blue;
-    }
+:3*/}
     .side {
       width: 140px;
       height: 80px;
       background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAIBAMAAAA7P9P/AAAAG1BMVEX//f6NQyTHYST26MunSyS7WB1/Oh399Njg07hlZYDcAAAAO0lEQVQI12MwZwCBYjhtXMBQzsBuzNAsUuxSLGLBkBLqqhSa4saQGKSk5KQqxpASqBSkFOrGkCYIAmkARJcLUDTrVAoAAAAASUVORK5CYII='); /*gotta do my english exam but I don't wanna, this is way more fun*/
-      background-color: red;
       background-size:100% 100%;
       transform: translateZ(70px);
     }
@@ -51,8 +49,11 @@ There's a ***tie reading this.                                              Hint
       grid-gap: 3px;
       padding-top: 19px;
       padding-left: 16px;
-      top:1px;left:1px;
+      top:0px;left:0px;
       position: absolute;
+      border-style: solid;
+      border-width: 1px;
+      border-image: radial-gradient(100px at var(--mouse-x) var(--mouse-y), rgba(255,255,255,1), rgba(51, 51, 51, 0.6)) 1;
     }
     lijn{
       height: 1px;
@@ -60,33 +61,28 @@ There's a ***tie reading this.                                              Hint
       background-color: white;
       opacity: 1 !important;
     }
-    menjurand{
-      position: absolute;
-      left:0px;
-      top:0px;
-      height: 48px;
-      width: 48px;
-      background: aqua;
-      color:transparent;
-      overflow:hidden;
-    }
     menju:hover {
       opacity: 1;
       background: rgba(0, 0, 0, 0.5);
       border: 1px solid rgba(255, 255, 255, 0.5);
-      top:0px;left:0px;
+      top:var(--x)+"px";left:0px;
     }
     </style><!--
 expands in that direction -->
     <script>//       \/ looks like B to A
     developmentonly=btoa(btoa(`[["********"],["Je bent Geweldig"],["Fijne verjaardag!"],["**********"],["**** ****s ***!"],["I should be studying for my exam, but ***'re clearly more important."],["didn't get this idea from april fools"],["this is all secret"],["I'll never get ********"],["*** deserve ****"],["I might encode this to hide it from ***"]]`));
-  console.log(developmentonly)
-    document.addEventListener('mousemove',evt=>{document.getElementsByClassName("cubeX")[0].style.transform=`rotateX(${(evt.clientY-window.innerHeight/2)/window.innerHeight*90}deg)`; document.getElementsByTagName("menjurand")[0].style.background = `radial-gradient(100px at ${evt.clientX}px ${evt.clientY}px, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 19%, rgba(51, 51, 51, 0.6) 100%)`;});aplo="tomorrow"                      //*****EEEEEEEE                                         ***'RE ***                                        /*hi*/                                                             //I spent my whole birthday codign this                                                                                                                                                                                                                                                                 I created this out with tons of ****                                                                                                                                                                                                                                                                                        there's some hidden stuff                                                                         with some I mean *****                                                                                          and stuff ***'re allowed to see and also things I'd rather not have *** see
+  console.log(developmentonly)  
+  document.addEventListener('mousemove',evt=>{document.getElementsByClassName("cubeX")[0].style.transform=`rotateX(${(evt.clientY-window.innerHeight/2)/window.innerHeight*90}deg)`; 
+  root = document.documentElement;
+  root.style.setProperty('--mouse-x', evt.clientX + "px");
+  root.style.setProperty('--mouse-y', evt.clientY + "px");
+  thegradient=`radial-gradient(100px at ${evt.clientX}px ${evt.clientY}px, rgba(255,255,255,1), rgba(51, 51, 51, 0.6)) 1`
+  /*document.getElementsByTagName("menju")[0].style.borderImage = thegradient*/});aplo="tomorrow"                      //*****EEEEEEEE                                         ***'RE ***                                        /*hi*/                                                             //I spent my whole birthday codign this                                                                                                                                                                                                                                                                 I created this out with tons of ****                                                                                                                                                                                                                                                                                        there's some hidden stuff                                                                         with some I mean *****                                                                                          and stuff ***'re allowed to see and also things I'd rather not have *** see
+  
     var confetti={maxCount:150,speed:2,frameInterval:15,alpha:1,gradient:!1,start:null,stop:null,toggle:null,pause:null,resume:null,togglePause:null,remove:null,isPaused:null,isRunning:null};!function(){confetti.start=s,confetti.stop=w,confetti.toggle=function(){e?w():s()},confetti.pause=u,confetti.resume=m,confetti.togglePause=function(){i?m():u()},confetti.isPaused=function(){return i},confetti.remove=function(){stop(),i=!1,a=[]},confetti.isRunning=function(){return e};var t=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame,n=["rgba(30,144,255,","rgba(107,142,35,","rgba(255,215,0,","rgba(255,192,203,","rgba(106,90,205,","rgba(173,216,230,","rgba(238,130,238,","rgba(152,251,152,","rgba(70,130,180,","rgba(244,164,96,","rgba(210,105,30,","rgba(220,20,60,"],e=!1,i=!1,o=Date.now(),a=[],r=0,l=null;function d(t,e,i){return t.color=n[Math.random()*n.length|0]+(confetti.alpha+")"),t.color2=n[Math.random()*n.length|0]+(confetti.alpha+")"),t.x=Math.random()*e,t.y=Math.random()*i-i,t.diameter=10*Math.random()+5,t.tilt=10*Math.random()-10,t.tiltAngleIncrement=.07*Math.random()+.05,t.tiltAngle=Math.random()*Math.PI,t}function u(){i=!0}function m(){i=!1,c()}magicpotat=atob(atob(developmentonly));function c(){if(!i)if(0===a.length)l.clearRect(0,0,window.innerWidth,window.innerHeight),null;else{var n=Date.now(),u=n-o;(!t||u>confetti.frameInterval)&&(l.clearRect(0,0,window.innerWidth,window.innerHeight),function(){var t,n=window.innerWidth,i=window.innerHeight;r+=.01;for(var o=0;o<a.length;o++)t=a[o],!e&&t.y<-15?t.y=i+100:(t.tiltAngle+=t.tiltAngleIncrement,t.x+=Math.sin(r)-.5,t.y+=.5*(Math.cos(r)+t.diameter+confetti.speed),t.tilt=15*Math.sin(t.tiltAngle)),(t.x>n+20||t.x<-20||t.y>i)&&(e&&a.length<=confetti.maxCount?d(t,n,i):(a.splice(o,1),o--))}(),function(t){for(var n,e,i,o,r=0;r<a.length;r++){if(n=a[r],t.beginPath(),t.lineWidth=n.diameter,i=n.x+n.tilt,e=i+n.diameter/2,o=n.y+n.tilt+n.diameter/2,confetti.gradient){var l=t.createLinearGradient(e,n.y,i,o);l.addColorStop("0",n.color),l.addColorStop("1.0",n.color2),t.strokeStyle=l}else t.strokeStyle=n.color;t.moveTo(e,n.y),t.lineTo(i,o),t.stroke()}}(l),o=n-u%confetti.frameInterval),requestAnimationFrame(c)}}function s(t,n,o){var r=window.innerWidth,u=window.innerHeight;window.requestAnimationFrame=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(t){return window.setTimeout(t,confetti.frameInterval)};if(aplo=="*****"){console.log('Adding more confetti...')}else{console.log(JSON.parse(magicpotat)[Math.floor(Math.random() * 3)][0])};var m=document.getElementById("confetti-canvas");null===m?((m=document.createElement("canvas")).setAttribute("id","confetti-canvas"),m.setAttribute("style","display:block;z-index:999999;pointer-events:none;position:fixed;top:0"),document.body.prepend(m),m.width=r,m.height=u,window.addEventListener("resize",function(){m.width=window.innerWidth,m.height=window.innerHeight},!0),l=m.getContext("2d")):null===l&&(l=m.getContext("2d"));aplo="*****";var s=confetti.maxCount;if(n)if(o)if(n==o)s=a.length+o;else{if(n>o){var f=n;n=o,o=f}s=a.length+(Math.random()*(o-n)+n|0)}else s=a.length+n;else o&&(s=a.length+o);for(;a.length<s;)a.push(d({},r,u));e=!0,i=!1,c(),t&&window.setTimeout(w,t)}function w(){e=!1}}();/*I see the secret script isn't secret anymore*///                                           -->                                                                                                             just kidding keep looking!                                                                                                                                                                             <-- it seems to be going further -->                                                                                                               btw those are arrows                                                                                                                                 okay this is the end
     </script>                       <!----------------------it's all so worth it----------------->
-    <script>adrianetti();function adrianetti()/*Happy Birthdayy*/{confetti.start();setTimeout(function(){confetti.stop();},3000)}</script>
-    <menjurand>***************** *****<!--***'re ****-->
-    <menju onclick="adrianetti()"><lijn></lijn><lijn></lijn><lijn></lijn></menju></menjurand>
+    <script>adrianetti();function adrianetti()/*Happy Birthdayy*/{confetti.start();setTimeout(function(){confetti.stop();},3000)}</script>***************** *****<!--***'re ****-->
+    <menju onclick="adrianetti()" onmouseover="Imhoveringoverthemenubuttonrightnow=true" onmouseout="Imhoveringoverthemenubuttonrightnow=false"><lijn></lijn><lijn></lijn><lijn></lijn></menju>
     <button onclick="adrianetti()"><!--also ***'re ********-->More Confetti</button>
     <div class="kontainer">
       <div class="cubeX"><!--cleaning up-->
